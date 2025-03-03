@@ -1,0 +1,38 @@
+<header>
+    <h1><a href="/">Jan Kwong's Page</a></h1>
+    <nav>
+        <ul id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="exp.html">Experiences</a></li>
+        </ul>
+    </nav>
+</header>
+<style>
+    nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+    flex-wrap: wrap;
+    }
+
+    nav ul li:hover {
+        background-color: color(srgb 0.94 0.94 0.94);
+        transform: scale(1.05);
+    }
+
+    nav ul li {
+        display: block;
+        padding: 8px 20px;
+        border: 2px solid;
+        border-radius: 3px;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>

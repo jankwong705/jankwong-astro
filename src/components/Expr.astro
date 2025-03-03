@@ -1,0 +1,27 @@
+---
+const jobs = await Astro.glob('../pages/experiences/*.md');
+---
+
+{jobs.map(job => (
+    <job-exp>
+        <h3>{job.frontmatter.title}</h3>
+        <p>{job.frontmatter.employer}</p>
+        <p>{job.frontmatter.location}</p>
+        <p>{job.frontmatter.duration}</p>
+        <job.Content />
+    </job-exp>
+))}
+
+<style>
+    job-exp:has(h3) {
+    animation: fade 1.5s ease-in-out;
+    display: block;
+    padding: 1rem;
+    margin: 10px;
+    border: 2px solid #28434e;
+    border-radius: 7px;
+    text-align: left;
+    color: #333;
+    font-size: 1.2em;
+}
+</style>
